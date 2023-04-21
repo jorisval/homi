@@ -1,16 +1,16 @@
 import { useContext, useEffect } from "react";
-import CatalogView from "../layout/catalog-view";
+//import CatalogView from "../layout/catalog-view";
 import { HeaderContext } from "../utils/context";
-import Hero from "../../assets/images/hero.png";
-import BeneEquipe from "../../assets/images/benefice-equipe.png";
-import BeneMb from "../../assets/images/benefice-mb.png";
-import BeneSav from "../../assets/images/benefice-sav.png";
-import IconLearn from "../../assets/images/icone-learn.png";
-import IconUpdate from "../../assets/images/icone-update.png";
-import IconPrice from "../../assets/images/icone-price.png";
-import IconSatisfaction from "../../assets/images/icone-satisfaction.png";
+//import Hero from "../../assets/images/hero.png";
+//import BeneEquipe from "../../assets/images/benefice-equipe.png";
+//import BeneMb from "../../assets/images/benefice-mb.png";
+//import BeneSav from "../../assets/images/benefice-sav.png";
+//import IconLearn from "../../assets/images/icone-learn.png";
+//import IconUpdate from "../../assets/images/icone-update.png";
+//import IconPrice from "../../assets/images/icone-price.png";
+//import IconSatisfaction from "../../assets/images/icone-satisfaction.png";
 import { useFetch } from "../utils/hooks";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 import { HomeContainer } from "../styles/Home";
 
 
@@ -20,9 +20,9 @@ function Home() {
         setActivePage('home');
     }, [setActivePage]);
     const { data } = useFetch('http://localhost:3000/api/client-result');
-    
+    console.log(data);
     return(
-        <HomeContainer className="home">
+        <HomeContainer className="home">{/*
             <div className="hero">
                 <div className="hero__text">
                     <h1>L'équipe secrète derrière les e-commerçants qui se détentent et chiffrent sans stress</h1>
@@ -111,7 +111,7 @@ function Home() {
                         <p>Votre satisfaction est notre priorité et nous faisons tout pour que vous le soyez à 100%</p>
                     </div>
                 </div>
-            </div>
+            </div>*/}
         </HomeContainer>
     )
 }

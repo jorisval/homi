@@ -2,9 +2,6 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const catalogRoutes = require('./routes/catalog');
-const clientResultRoutes = require('./routes/client-result');
-const portfolioShopRoutes = require('./routes/portfolio-shop');
-const portfolioVideoRoutes = require('./routes/portfolio-video');
 const postRoutes = require('./routes/post');
 const adminRoutes = require('./routes/admin');
 const contactRoutes = require('./routes/contact');
@@ -12,7 +9,7 @@ const newsletterRoutes = require('./routes/newsletter');
 const orderRoutes = require('./routes/order');
 const path = require('path');
 
-mongoose.connect('mongodb+srv://jorisawoui:creadata07@cluster0.zog3i4t.mongodb.net/?retryWrites=true&w=majority',
+mongoose.connect('mongodb+srv://jorisawoui:homidata07@homidb.n0whkdk.mongodb.net/?retryWrites=true&w=majority',
     { useNewUrlParser: true,
       useUnifiedTopology: true })
     .then(() => console.log('Connexion à MongoDB réussie !'))
@@ -30,9 +27,6 @@ app.use((req, res, next) => {
 });
 
 app.use('/api/catalog', catalogRoutes);
-app.use('/api/client-result', clientResultRoutes);
-app.use('/api/portfolio-shop', portfolioShopRoutes);
-app.use('/api/portfolio-video', portfolioVideoRoutes);
 app.use('/api/post', postRoutes);
 app.use('/api/admin', adminRoutes);
 app.use('/api/contact', contactRoutes);

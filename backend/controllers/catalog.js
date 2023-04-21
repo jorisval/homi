@@ -12,23 +12,33 @@ exports.createProduct = (req, res, next) => {
     });
     product.save()
     .then((product) => { 
-        const parsedOptions = JSON.parse(options);
-        const promisesOptions = parsedOptions.map((option) => {
-            const {name, values} = option;
-            const optionModel = new Option({ product: product._id, name, values })
-            return optionModel.save();
-        })
-        Promise.all(promisesOptions)
-        .then((savedOptions) => {
-            product.options = savedOptions.map((option) => option._id);
-            product.save()
-            .then(() => res.status(201).json({ message: "Product saved!" }))
-            .catch((error) => res.status(400).json({ error }));
-        })
-        .catch(error => {
-            console.error('Error saving options 1:', error);
-            res.status(400).json({ error })
-        });
+        if (!options) {
+            res.status(201).json({ message: "Product saved without options!" });
+        } else {
+            let parsedOptions;
+            try {
+                parsedOptions = JSON.parse(options);
+            } catch (error) {
+                console.error('Invalid JSON format for options:', error);
+                return res.status(400).json({ error: 'Invalid JSON format for options' });
+            }
+            const promisesOptions = parsedOptions.map((option) => {
+                const {name, values} = option;
+                const optionModel = new Option({ product: product._id, name, values })
+                return optionModel.save();
+            })
+            Promise.all(promisesOptions)
+            .then((savedOptions) => {
+                product.options = savedOptions.map((option) => option._id);
+                product.save()
+                .then(() => res.status(201).json({ message: "Product saved!" }))
+                .catch((error) => res.status(400).json({ error }));
+            })
+            .catch(error => {
+                console.error('Error saving options:', error);
+                res.status(400).json({ error })
+            });
+        }
     })
     .catch(error => {
         console.error('Error saving options 2:', error);
