@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Logo from "../../assets/images/logo-ecom-crea.png";
+import Logo from "../../assets/images/homi_logo.png";
 import ThankYouPopup from "../pages/Thank-you-newsletter";
 
 function Footer() {

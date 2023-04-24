@@ -1,7 +1,7 @@
 import Cart from "./Cart";
 import MenuMd from "./Menu-md";
 import NavLg from "./Nav-lg";
-import Logo from "../../assets/images/logo-ecom-crea.png";
+import Logo from "../../assets/images/homi_logo.png";
 import { HeaderContext } from "../utils/context";
 import { useContext } from "react";
 
@@ -21,7 +21,7 @@ function Header() {
       </div>
       <NavLg />
       <div className="header__cart">
-          <span className="bi bi-bag-plus" onClick={handleBagPlusClick}></span>
+          <span className="bi bi-cart3" onClick={handleBagPlusClick}></span>
       </div>
       <Cart />
     </div>

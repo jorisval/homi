@@ -22,34 +22,32 @@ const LayoutsStyle = createGlobalStyle`
         font-size: ${theme.typography.navFontSize};
 
         &.home {
-            @media (min-width: ${theme.breakpoints.up.medium}) {
             background-color: ${theme.colors.backgroundColor1};
-            }
         }
 
         .menu-md {
-            display: block;
+                display: block;
 
             @media (min-width: ${theme.breakpoints.up.medium}) {
-            display: none;
+                display: none;
             }
 
             &__icon {
-            width: ${theme.layout.menuTabWidth};
-            height: 40px;
-            position: absolute;
-            z-index: 100;
-            top: 0px;
-            left: 20px;
-            padding-top: 15px;
-            cursor: pointer;
-            transition: all 0.6s ease-in-out;
+                width: ${theme.layout.menuTabWidth};
+                height: 40px;
+                position: absolute;
+                z-index: 100;
+                top: 0px;
+                left: calc(8% + 15px);
+                padding-top: 18px;
+                cursor: pointer;
+                transition: all 0.6s ease-in-out;
 
             div {
-                height: 2.5px;
+                height: 2px;
                 background-color: ${theme.colors.nav};
                 display: block;
-                margin: 5px;
+                margin: 4px;
                 transition: all 0.6s ease-in-out;
             }
 
@@ -60,7 +58,7 @@ const LayoutsStyle = createGlobalStyle`
                 position: fixed;
 
                 #icon-bar-one {
-                transform: translateY(7.5px) rotate(-135deg);
+                transform: translateY(4px) rotate(-135deg);
                 transition: all 0.6s ease-in-out;
                 background-color: ${theme.colors.secondary};
                 }
@@ -88,10 +86,10 @@ const LayoutsStyle = createGlobalStyle`
             transition: all 0.6s ease-in-out;
 
             li {
-                height: 70px;
+                height: 50px;
                 list-style-type: none;
                 text-align: center;
-                line-height: 70px;
+                line-height: 50px;
                 transition: all 0.5s ease;
 
                 &:hover {
@@ -101,10 +99,11 @@ const LayoutsStyle = createGlobalStyle`
             }
 
             a {
+                font-size: 1rem;
                 padding: 30px 25px;
                 text-decoration: none;
                 color: ${theme.colors.white};
-                font-weight: 800;
+                
             }
 
             &.show {
@@ -118,32 +117,36 @@ const LayoutsStyle = createGlobalStyle`
 
         &__logo {
             margin-right: 0%;
-            padding: 15px;
-            padding-left: 0;
+            padding: 20px;
             text-align: center;
-
+            @media (min-width: ${theme.breakpoints.up.medium}) {
+                padding-left: 0;
+                margin-right: 10%;
+            }
+            @media (min-width: ${theme.breakpoints.up.large}) {
+                margin-right: 30%;
+            }
             img {
-            height: 1.625rem;
-
-            @media (min-width: ${theme.breakpoints.up.medium}) {
-                height: 2rem;
-            }
-            }
-
-            @media (min-width: ${theme.breakpoints.up.medium}) {
-            margin-right: 15%;
+                width: 80%;
+                @media (min-width: ${theme.breakpoints.up.large}) {
+                    width: 100%;
+                }
             }
         }
 
         .nav-lg {
             display: none;
+            font-size: 0.875rem;
+            width: 60%;
+            margin-right: 5%;
 
             @media (min-width: ${theme.breakpoints.up.medium}) {
-            display: block;
+                display: block;
             }
-
-            width: 40%;
-            margin-right: 10%;
+            @media (min-width: ${theme.breakpoints.up.xlarge}) {
+                font-size: 1rem;
+                width: 50%;
+            }
 
             ul {
             display: flex;
@@ -153,7 +156,7 @@ const LayoutsStyle = createGlobalStyle`
 
             .active {
                 a {
-                color: ${theme.colors.secondary};
+                    border-bottom: 2px solid ${theme.colors.secondary};
                 }
             }
             }
@@ -163,28 +166,28 @@ const LayoutsStyle = createGlobalStyle`
             }
 
             a {
-            text-decoration: none;
-            color: ${theme.colors.nav};
-            font-weight: bold;
+                text-decoration: none;
+                color: ${theme.colors.nav};
+                padding: 0 0 0.25rem 0;
 
-            &:hover {
-                color: ${theme.colors.secondary};
-            }
+                &:hover {
+                    border-bottom: 2px solid ${theme.colors.secondary};
+                }
             }
         }
 
         &__cart {
             text-align: center;
-            padding: 15px 0;
+            padding: 17px 0;
         }
 
-        .bi-bag-plus {
-            font-size: 1.25rem;
+        .bi-cart3 {
+            font-size: 1rem;
             color: ${theme.colors.nav};
             cursor: pointer;
 
-            @media (min-width: ${theme.breakpoints.up.medium}) {
-            font-size: 1.5rem;
+            @media (min-width: ${theme.breakpoints.up.xlarge}) {
+            font-size: 1.25rem;
             }
         }
 
