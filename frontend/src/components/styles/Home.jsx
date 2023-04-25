@@ -14,96 +14,87 @@ export const HomeContainer = styled.div`
 animation: ${fadeIn} 1s ease-in;
 .hero {
     display: flex;
-    background: url("../../assets/images/hero.png") no-repeat center;
-    background-size: cover;
+    flex-direction: column;
+    background-color: ${theme.colors.backgroundColor1};
     margin: 0 -0.5rem;
-    @media (min-width: ${theme.breakpoints.up.medium}) {
-        background: unset;
-        background-image: linear-gradient(${theme.colors.backgroundColor1}, ${theme.colors.transparent});
+    @media (min-width: ${theme.breakpoints.up.large}) {
         flex-direction: row;
         justify-content: space-between;
         margin: 0 -8px;
+        padding-right: ${theme.layout.spaceBetween60};
+        padding-bottom: ${theme.layout.spaceBetween90};
     }
     &__text {
-        background-color: rgba(225,225,225,0.9);
         border-radius: 0.5rem;
         padding: 0.5rem;
         z-index: 2;
         width: 80%;
-        margin: 3.125rem auto;
+        margin: auto;
         text-align: center;
-        @media (min-width: ${theme.breakpoints.up.medium}) {
+        @media (min-width: ${theme.breakpoints.up.large}) {
             padding-top: 8.75rem;
             margin: 0 0 0 ${theme.layout.marginLeftRight};
-            width: 50%;
+            width: 40%;
             max-width: 33rem;
-            background-color: unset;
             text-align: unset;
             border-radius: 0;
         }
         h1 {
-            color: ${theme.colors.primary};
+            color: ${theme.colors.white};
             font-size: 1.5rem;
-            font-weight: 800;
             line-height: 2rem;
             margin-bottom: ${theme.layout.spaceBetween30};
-            @media (min-width: ${theme.breakpoints.up.medium}) {
+            @media (min-width: ${theme.breakpoints.up.large}) {
                 font-size: 2.375rem;
                 line-height: 3.2rem;
                 text-align: left;
             }
         }
         .subtitle {
-            color: ${theme.colors.primary};
+            color: ${theme.colors.white};
             font-size: 1rem;
-            font-weight: 800;
             line-height: 1.625rem;
+            font-weight: 200;
             margin-bottom: ${theme.layout.spaceBetween30};
-            @media (min-width: ${theme.breakpoints.up.medium}) {
+            @media (min-width: ${theme.breakpoints.up.large}) {
                 text-align: left;
             }
         }
-        .steps {
+        .cta-row {
             display: flex;
-            flex-wrap: wrap;
-            @media (max-width: ${theme.breakpoints.down.small}) {
-                justify-content: center;
+            justify-content: center;
+            @media (min-width: ${theme.breakpoints.up.large}) {
+                justify-content: left;
             }
-            div {
-                text-align: center;
-                margin: 1rem 0;
-                &:not(:last-child) {
-                    margin-right: 1.25rem;
-                    @media (min-width: ${theme.breakpoints.up.medium}) {
-                        margin-right: 1.875rem;
-                    }
+            .cta-button {
+                margin-right: 0.9375rem;
+                color: ${theme.colors.white};
+                background-color: ${theme.colors.transparent};
+                border: 2px solid ${theme.colors.white};
+                font-weight: 300;
+                &.view {
+                    color: ${theme.colors.button};
+                    background-color: ${theme.colors.secondary};
+                    border: 2px solid ${theme.colors.secondary};
                 }
-                span {
-                    font-size: 1.5rem;
-                    font-weight: bold;
-                    color: ${theme.colors.titleH2};
-                    @media (min-width: ${theme.breakpoints.up.medium}) {
-                        font-size: 2.5rem;
-                    }
-                }
-                p {
-                    font-size: 0.875rem;
-                    font-weight: 400;
-                    color: ${theme.colors.primary};
-                    margin: 0.25rem 0;
-                    @media (min-width: ${theme.breakpoints.up.medium}) {
-                        font-size: 1.125rem;
-                    }
+                :hover {
+                    color: ${theme.colors.white};
+                    background-color: ${theme.colors.button};
+                    border: 2px solid ${theme.colors.button};
                 }
             }
         }
 
     }
     &__image {
-        display: none;
+        margin: auto;
         @media (min-width: ${theme.breakpoints.up.medium}) {
-            display: block;
+            max-width: 60%;
+        }
+        @media (min-width: ${theme.breakpoints.up.large}) {
             max-width: 50%;
+            padding-top: 8.75rem;
+            margin: none;
         }
         img {
             width: 100%;

@@ -1,7 +1,7 @@
 import { useContext, useEffect } from "react";
 //import CatalogView from "../layout/catalog-view";
 import { HeaderContext } from "../utils/context";
-//import Hero from "../../assets/images/hero.png";
+import Hero from "../../assets/images/hero_image.png";
 //import BeneEquipe from "../../assets/images/benefice-equipe.png";
 //import BeneMb from "../../assets/images/benefice-mb.png";
 //import BeneSav from "../../assets/images/benefice-sav.png";
@@ -10,7 +10,7 @@ import { HeaderContext } from "../utils/context";
 //import IconPrice from "../../assets/images/icone-price.png";
 //import IconSatisfaction from "../../assets/images/icone-satisfaction.png";
 import { useFetch } from "../utils/hooks";
-//import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { HomeContainer } from "../styles/Home";
 
 
@@ -22,31 +22,20 @@ function Home() {
     const { data } = useFetch('http://localhost:3000/api/client-result');
     console.log(data);
     return(
-        <HomeContainer className="home">{/*
+        <HomeContainer className="home">
             <div className="hero">
                 <div className="hero__text">
-                    <h1>L'équipe secrète derrière les e-commerçants qui se détentent et chiffrent sans stress</h1>
-                    <p className="subtitle">Déléguez puis laissez l'équipe Ecom-crea s'occuper des tâches et concentrez-vous sur l’essentiel !</p>
-                    <Link to='/catalog' className="cta-button">Voir catalogue</Link>
-                    <div className="steps">
-                        <div>
-                            <span>1M+</span>
-                            <p>Réalisés par nos clients</p>
-                        </div>
-                        <div>
-                            <span>100%</span>
-                            <p>Satisfaction</p>
-                        </div>
-                        <div>
-                            <span>7/7</span>
-                            <p>Disponibilité</p>
-                        </div>
+                    <h1>Modern Interior Design Studio</h1>
+                    <p className="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <div className="cta-row">
+                        <Link to='#catalogView' className="cta-button view">Shop Now</Link>
+                        <Link to='/catalog' className="cta-button">Explore</Link>
                     </div>
                 </div>
                 <div className="hero__image">
                     <img src={Hero} alt=""/>
                 </div>
-            </div>
+            </div>{/*
             <CatalogView />
             <div className="benefice-team">
                 <div className="benefice-team__image">

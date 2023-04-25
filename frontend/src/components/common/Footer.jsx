@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Logo from "../../assets/images/homi_logo.png";
+import Logo from "../../assets/images/logo-colored.png";
 import ThankYouPopup from "../pages/Thank-you-newsletter";
 
 function Footer() {
@@ -13,7 +13,7 @@ function Footer() {
         for (const [key, value] of formData.entries()) {
           searchParams.append(key, value);
         }
-      
+    
         try {
             const response = await fetch("http://localhost:3000/api/newsletter", {
                 method: "POST",
@@ -58,29 +58,29 @@ function Footer() {
                     <h3>Contact & Support</h3>
                     <ul>
                         <li><a href="#b"><i className="bi"></i>+33 7 80 70 82 87</a></li>
-                        <li><a href="#b"><i className="bi"></i>info@ecom-crea.com</a></li>
+                        <li><a href="#b"><i className="bi"></i>info@homi.com</a></li>
                         <li><a href="#b"><i className="bi"></i>Lun-Ven 9H00-18H00</a></li>
                     </ul>
                 </div>
                 <div className="legal">
-                    <h3>Mentions légales</h3>
+                    <h3>Legal information</h3>
                     <ul>
-                        <li><a href="#b"><i className="bi"></i>Conditions Générales De Vente</a></li>
-                        <li><a href="#b"><i className="bi"></i>Politique de confidentialité</a></li>
-                        <li><a href="#b"><i className="bi"></i>Politique De Retour & Remboursement</a></li>
+                        <li><a href="#b"><i className="bi"></i>General Sales Conditions</a></li>
+                        <li><a href="#b"><i className="bi"></i>Privacy Policy</a></li>
+                        <li><a href="#b"><i className="bi"></i>Return & Fund Policy</a></li>
                     </ul>
                 </div>
                 <div className="newsletter">
                     <h3>Newsleter</h3>
-                    <p>Inscrivez-vous à notre newsletter et recevez votre offre de bienvenue !</p>
+                    <p>Subscribe to our newsletter and receive your welcome offer !</p>
                     <form onSubmit={handleSubmit}>
                         <input type="email" id="email" name="email" placeholder="Email"/>
-                        <input type="submit" value="S'inscrire"/>
+                        <input type="submit" value="Sign up"/>
                     </form>
                 </div>
             </div>
             <div className="footer__part-2">
-                <p>© 2022 Ecom-crea | Tous droits réservés.</p>
+                <p>© 2023 Homi | All rights reserved.</p>
             </div>
         </div>
     );

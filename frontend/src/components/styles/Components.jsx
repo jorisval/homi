@@ -21,10 +21,10 @@ const ComponentsStyle = createGlobalStyle`
 
     .cta-button {
         font-family: ${theme.typography.primaryFontFamily};
-        font-size: 1rem;
+        font-size: 0.875rem;
         font-weight: 400;
         color: ${theme.colors.white};
-        padding: 0.55rem 2.18rem;
+        padding: 0.5rem 1.5rem;
         background-color: ${theme.colors.button};
         border-radius: 2rem;
         border-style: none;
@@ -32,6 +32,10 @@ const ComponentsStyle = createGlobalStyle`
         margin-bottom: ${theme.layout.spaceBetween30};
         cursor: pointer;
         text-decoration: none;
+        @media (min-width: ${theme.breakpoints.up.medium}) {
+            font-size: 1rem;
+            padding: 0.55rem 2.18rem;
+        }
     }
 
     .payment-button {
