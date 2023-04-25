@@ -1,5 +1,5 @@
 import { useContext, useEffect } from "react";
-//import CatalogView from "../layout/catalog-view";
+import CatalogView from "../layout/catalog-view";
 import { HeaderContext } from "../utils/context";
 import Hero from "../../assets/images/hero_image.png";
 //import BeneEquipe from "../../assets/images/benefice-equipe.png";
@@ -35,8 +35,8 @@ function Home() {
                 <div className="hero__image">
                     <img src={Hero} alt=""/>
                 </div>
-            </div>{/*
-            <CatalogView />
+            </div>
+            <CatalogView />{/*
             <div className="benefice-team">
                 <div className="benefice-team__image">
                     <img src={BeneEquipe} alt=""/>
