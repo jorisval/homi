@@ -102,206 +102,167 @@ animation: ${fadeIn} 1s ease-in;
     }
 
 }
-.benefice-team {
-    margin: 0 ${theme.layout.marginLeftRight};
-    margin-top: ${theme.layout.spaceBetween60};
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    @media (min-width: ${theme.breakpoints.up.medium}) {
-        flex-direction: row-reverse;
-        align-items: center;
-    }
-    &__image {
-        width: 100%;
-        margin-bottom: ${theme.layout.spaceBetween20};
-        @media (min-width: ${theme.breakpoints.up.medium}) {
-            width: 50%;
-            max-width: 43.75rem;
-        }
-        img {
-            width: 100%;
-        }
-    }
-    &__text {
-        text-align: left;
-        @media (min-width: ${theme.breakpoints.up.medium}) {
-            width: 45%;
-            max-width: 41.25rem;
-        }
-        p {
-            color: ${theme.colors.paragraph};
-            font-size: 1rem;
-            font-weight: 500;
-            line-height: 1.625rem;
-            margin-bottom: ${theme.layout.spaceBetween20};
-            @media (min-width: ${theme.breakpoints.up.medium}) {
-                font-size: 1.125rem;
-            }
-        }
-        a {
-            text-decoration: none;
-            color: ${theme.colors.secondary};
-            font-size: 1rem;
-            font-weight: 500;
-            margin-bottom: ${theme.layout.spaceBetween20};
-            @media (min-width: ${theme.breakpoints.up.medium}) {
-                font-size: 1.125rem;
-            }
-        }
-    }
-}
-.benefice-mb {
-    margin: 0 ${theme.layout.marginLeftRight};
-    margin-top: ${theme.layout.spaceBetween60};
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    @media (min-width: ${theme.breakpoints.up.medium}) {
-        flex-direction: row;
-        align-items: center;
-    }
-    &__image {
-        width: 100%;
-        margin-bottom: ${theme.layout.spaceBetween20};
-        @media (min-width: ${theme.breakpoints.up.medium}) {
-            width: 50%;
-            max-width: 43.75rem;
-        }
-        img {
-            width: 100%;
-        }
-    }
-    &__text {
-        text-align: left;
-        @media (min-width: ${theme.breakpoints.up.medium}) {
-            width: 45%;
-            max-width: 41.25rem;
-        }
-        p {
-            color: ${theme.colors.paragraph};
-            font-size: 1rem;
-            font-weight: 500;
-            line-height: 1.625rem;
-            margin-bottom: ${theme.layout.spaceBetween20};
-            @media (min-width: ${theme.breakpoints.up.medium}) {
-                font-size: 1.125rem;
-            }
-        }
-        a {
-            text-decoration: none;
-            color: ${theme.colors.secondary};
-            font-size: 1rem;
-            font-weight: 500;
-            margin-bottom: ${theme.layout.spaceBetween20};
-            @media (min-width: ${theme.breakpoints.up.medium}) {
-                font-size: 1.125rem;
-            }
-        }
-    }
-}
-.benefice-sav {
-    margin: 0 ${theme.layout.marginLeftRight};
-    margin-top: ${theme.layout.spaceBetween60};
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    @media (min-width: ${theme.breakpoints.up.medium}) {
-        flex-direction: row-reverse;
-        align-items: center;
-    }
-    &__image {
-        width: 100%;
-        margin-bottom: ${theme.layout.spaceBetween20};
-        @media (min-width: ${theme.breakpoints.up.medium}) {
-            width: 50%;
-            max-width: 43.75rem;
-        }
-        img {
-            width: 100%;
-        }
-    }
-    &__text {
-        text-align: left;
-        @media (min-width: ${theme.breakpoints.up.medium}) {
-            width: 45%;
-            max-width: 41.25rem;
-        }
-        
-        p {
-            color: ${theme.colors.paragraph};
-            font-size: 1rem;
-            font-weight: 500;
-            line-height: 1.625rem;
-            margin-bottom: ${theme.layout.spaceBetween20};
-            @media (min-width: ${theme.breakpoints.up.medium}) {
-                font-size: 1.125rem;
-            }
-        }
-        a {
-            text-decoration: none;
-            color: ${theme.colors.secondary};
-            font-size: 1rem;
-            font-weight: 500;
-            margin-bottom: ${theme.layout.spaceBetween20};
-            @media (min-width: ${theme.breakpoints.up.medium}) {
-                font-size: 1.125rem;
-            }
-        }
-    }
-}
-.result {
-    margin: 0 10%;
-    margin-top: ${theme.layout.spaceBetween60};
-    text-align: center;
-    &__elements {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        img {
-            max-width: 9.375rem;
-            height: fit-content;
-            border-radius: 0.625rem;
-            margin: auto;
-            margin-top: 0;
-            margin-bottom: 1rem;
-            @media (min-width: ${theme.breakpoints.up.medium}) {
-                max-width: 13rem;
-            }
-        }
-    }
-}
-.why {
+.benefits-one {
     margin: 0 ${theme.layout.marginLeftRight};
     margin-top: ${theme.layout.spaceBetween90};
-    text-align: center;
-    &__elements {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media (min-width: ${theme.breakpoints.up.medium}) {
+        flex-direction: row-reverse;
+        align-items: center;
     }
-    &__element {
-        width: 12.5rem;
-        padding: 1.375rem;
-        padding-top: 0;
-        text-align: center;
-        margin: auto;
+    &__image {
+        width: 100%;
+        margin-bottom: ${theme.layout.spaceBetween20};
         @media (min-width: ${theme.breakpoints.up.medium}) {
-            width: 20rem;
+            width: 35%;
+            max-width: 43.75rem;
         }
         img {
-            width: 4.625rem;
-            margin-bottom: 0.625rem;
+            width: 100%;
+        }
+    }
+    &__text {
+        text-align: left;
+        @media (min-width: ${theme.breakpoints.up.medium}) {
+            width: 60%;
+            max-width: 41.25rem;
         }
         p {
             color: ${theme.colors.paragraph};
             font-size: 1rem;
-            font-weight: 500;
             line-height: 1.625rem;
-            margin-bottom: ${theme.layout.spaceBetween30};
+            margin-bottom: ${theme.layout.spaceBetween20};
             @media (min-width: ${theme.breakpoints.up.medium}) {
                 font-size: 1.125rem;
+            }
+        }
+        .four-benefits {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            div {
+                width: 48%;
+                margin-top: 1rem;
+                @media (min-width: ${theme.breakpoints.up.medium}) {
+                    width: 40%;
+                }
+                span {
+                    font-size: 1.5rem;
+                }
+                p {
+                    margin-top: 0;
+                }
+                h4 {
+                    font-weight: 400;
+                    margin: 0.5rem 0;
+                }
+            }
+        }
+    }
+}
+.benefits-two {
+    margin: 0 ${theme.layout.marginLeftRight};
+    margin-top: ${theme.layout.spaceBetween90};
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media (min-width: ${theme.breakpoints.up.medium}) {
+        flex-direction: row;
+        align-items: center;
+    }
+    &__image {
+        width: 100%;
+        margin-bottom: ${theme.layout.spaceBetween20};
+        @media (min-width: ${theme.breakpoints.up.medium}) {
+            width: 60%;
+            max-width: 43.75rem;
+        }
+        img {
+            width: 100%;
+        }
+    }
+    &__text {
+        text-align: left;
+        @media (min-width: ${theme.breakpoints.up.medium}) {
+            width: 35%;
+            max-width: 41.25rem;
+        }
+        p {
+            color: ${theme.colors.paragraph};
+            font-size: 1rem;
+            line-height: 1.625rem;
+            margin-bottom: ${theme.layout.spaceBetween20};
+            @media (min-width: ${theme.breakpoints.up.medium}) {
+                font-size: 1.125rem;
+            }
+        }
+        .four-benefits {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            div {
+                display: flex;
+                width: 48%;
+                margin: 1.25rem 0;
+                span {
+                    font-size: 1rem;
+                    margin-top: 0.25rem;
+                }
+                p {
+                    margin: 0;
+                    margin-left: 0.5rem;
+                }
+            }
+        }
+    }
+}
+.blog {
+    margin: 0 ${theme.layout.marginLeftRight};
+    margin-top: ${theme.layout.spaceBetween90};
+    &__posts {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__post {
+        display: flex;
+        width: 80%;
+        min-width: 18.75rem;
+        margin: 0 1rem ${theme.layout.spaceBetween30} 0;
+        @media (min-width: ${theme.breakpoints.up.medium}) {
+            width: 30%;
+        }
+        .image {
+            width: 100%;
+            min-width: 6.25rem;
+            img {
+                width: 100%;
+            }
+        }
+        h4 {
+            font-weight: 400;
+            margin: 0;
+        }
+        p {
+            color: ${theme.colors.paragraph};
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            margin: 0.5rem 0;
+            @media (min-width: ${theme.breakpoints.up.medium}) {
+                font-size: 0.9375rem;
+            }
+        }
+        a {
+            color: ${theme.colors.paragraph};
+            font-size: 0.875rem;
+            text-decoration: none;
+            @media (min-width: ${theme.breakpoints.up.medium}) {
+                font-size: 0.9375rem;
+            }
+            :hover {
+                color: ${theme.colors.secondary};
             }
         }
     }
