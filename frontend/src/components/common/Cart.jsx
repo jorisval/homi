@@ -181,16 +181,18 @@ function Cart() {
                             <span>{item.name}</span>
                             <span className="bi bi-x" onClick={() => removeItem(itemIndex, orderInfos.orderItems[index].option)}></span>
                         </div>
-                        <div className="cart-content-product__part2-option">
-                            <span>{orderInfos.orderItems[itemIndex].option}</span>
-                        </div>
+                        {orderInfos.orderItems[itemIndex].option && (
+                            <div className="cart-content-product__part2-option">
+                                <span>{orderInfos.orderItems[itemIndex].option}</span>
+                            </div>
+                        )}
                         <div className="cart-content-product__part2-quantity">
                             <div className="quantity">
                                 <button className="quantity__button-down" onClick={() => downQuantity(itemIndex)}>-</button>
                                 <input type="number" id="quantity" value={orderInfos.orderItems[itemIndex].quantity} onChange={(e) => setQuantity(itemIndex, Number(e.target.value))} />
                                 <button className="quantity__button-up" onClick={() => upQuantity(itemIndex)}>+</button>
                             </div>
-                            <div className="price">{totalPrice}€</div>
+                            <div className="price">${totalPrice}</div>
                         </div>
                     </div>
                 </div>
@@ -203,21 +205,21 @@ function Cart() {
             <div className="background" onClick={handleCartBackgroundClick}></div>
             <div className="cart-content">
                 <div className="cart-content__header">
-                    <span>Panier</span>
+                    <span>Cart</span>
                     <span className="bi bi-x" onClick={handleCartContentCloseClick}></span>
                 </div>
                 {productList}
                 {productIds.length > 0 && (
                     <>
                         <div className="cart-content-subtotal">
-                            <span>Sous-total</span>
+                            <span>Subtotal</span>
                             {isLoading ? 
                                 <SkeletonText style={{width: '10%'}}/> : 
-                                <span className="price">{subtotal}€</span>
+                                <span className="price">${subtotal}</span>
                             }
                         </div>
                         <div className="cart-content-payment">
-                            <Link to='/checkout' className="payment-button" onClick={handlePaymentButtonClick}><span className="bi bi-credit-card"></span>Paiement sécurisé</Link>
+                            <Link to='/checkout' className="payment-button" onClick={handlePaymentButtonClick}><span className="bi bi-credit-card"></span>Secure payment</Link>
                         </div>
                     </>
                 )}

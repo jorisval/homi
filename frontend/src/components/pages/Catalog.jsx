@@ -55,7 +55,7 @@ function Catalog() {
                                         <div className="service__content">
                                             <img src={product.images[0]} alt=""/>
                                             <p>{product.name}</p>
-                                            <span>{product.price}€</span>
+                                            <span>${product.price}</span>
                                         </div>
                                         <div className={`service__background ${
                                             activeProduct === product._id ? "active" : ""

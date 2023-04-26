@@ -107,7 +107,7 @@ function Product() {
                         <div className="product-hero__part-2">
                             <div className="product-title">
                                 <h2>{data.name}</h2>
-                                <span>{data.price}€</span>
+                                <span>${data.price}</span>
                             </div>
                             { data.options && data.options.map((option, index) => {
                                 return(

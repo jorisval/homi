@@ -52,15 +52,15 @@ function Contact() {
     return(
         <ContactContainer className="contact">
             <div className="pages-title">
-                <h1>Contactez-nous<span className="bi bi-chevron-double-right"></span></h1>
+                <h1>Contact us<span className="bi bi-chevron-double-right"></span></h1>
             </div>
             <div className="contact-form">
                 <form onSubmit={handleSubmit}>
-                    <div><input type="text" name="name" id="name" placeholder="Nom"/></div>
+                    <div><input type="text" name="name" id="name" placeholder="Name"/></div>
                     <div><input type="email" name="email" id="email" placeholder="Email"/></div>
-                    <div><textarea name="comment" id="comment" rows="6" placeholder="Commentaire..."></textarea></div>
-                    <div className="checkbox"><input type="checkbox" name="agree" id="agree"/><label for="">Dans le but de ma demande personnelle via le formulaire, j'accepte à ce que mes données soient utilisées afin de me recontacter. Vos informations ne seront en aucun cas conservées à des fins commerciales.</label></div>
-                    <div><input type="submit" value="Envoyer"/></div>
+                    <div><textarea name="comment" id="comment" rows="6" placeholder="Comment..."></textarea></div>
+                    <div className="checkbox"><input type="checkbox" name="agree" id="agree"/><label for="">For the purpose of my personal request via the form, I agree that my data will be used to contact me. Your information will not be kept for commercial purposes.</label></div>
+                    <div><input type="submit" value="Send"/></div>
                 </form>
             </div>
             {showThankYouPopup && (
