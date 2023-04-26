@@ -31,7 +31,7 @@ function Product() {
     }, [data, activeOption])
     
     const handleAddToCart = () => {
-        if (!activeOption) {
+        if (data.options && data.options.lenght > 0 && !activeOption) {
             setShowOptionWarning(true);
             return;
         }
@@ -139,12 +139,12 @@ function Product() {
                                 )
                             }) }
                             <div className="quantity">
-                                <label  htmlFor="quantity">Quantité</label>
+                                <label  htmlFor="quantity">Quantity</label>
                                 <button className="quantity__button-down" onClick={() => setQuantity(quantity > 1 ? quantity - 1 : 1)}>-</button>
                                 <input type="number" id="quantity" value={quantity} onChange={(e) => setQuantity(Number(e.target.value))} />
                                 <button className="quantity__button-up" onClick={() => setQuantity(quantity + 1)}>+</button>
                             </div>
-                            <button className="add-to-cart" onClick={() => handleAddToCart()}>+ Ajouter au panier</button>
+                            <button className="add-to-cart" onClick={() => handleAddToCart()}>+ Add to cart</button>
                         </div>
                     </div>
                 )
@@ -168,7 +168,6 @@ function Product() {
             }
             <div className="product-catalog-view">
                 <div className="solid"></div>
-                <h3>Découvrir d'autres services</h3>
                 <CatalogView />
             </div>
         </ProductContainer>

@@ -62,6 +62,7 @@ export const ProductContainer = styled.div`
             h2 {
                 font-size: 1.5rem;
                 margin-top: 1rem;
+                color: ${theme.colors.primary};
 
                 @media (min-width: ${theme.breakpoints.up.small}) {
                     margin-top: 0.5rem;
@@ -80,7 +81,7 @@ export const ProductContainer = styled.div`
                 }
 
                 span {
-                    color: ${theme.colors.secondary};
+                    color: ${theme.colors.primary};
                     font-size: 1.25rem;
 
                     @media (min-width: ${theme.breakpoints.up.medium}) {
@@ -122,10 +123,11 @@ export const ProductContainer = styled.div`
             }
 
             .quantity {
-                color: ${theme.colors.paragraph};
+                color: ${theme.colors.titleH2};
 
                 label {
-                    margin-bottom: 1rem;
+                    display: block;
+                    margin-bottom: 0.5rem;
                     margin-right: 0.625rem;
                 }
 
@@ -174,27 +176,25 @@ export const ProductContainer = styled.div`
     .product-body {
         padding: ${theme.layout.spaceBetween30} ${theme.layout.marginLeftRight};
         color: ${theme.colors.paragraph};
-        font-size: 1.125rem;
-        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.375rem;
 
         @media (min-width: ${theme.breakpoints.up.medium}) {
-            font-size: 1.25rem;
+            padding: ${theme.layout.spaceBetween60} ${theme.layout.marginLeftRight};
+            font-size: 1.125rem;
+            line-height: 1.875rem;
             width: 70%;
             margin: auto;
         }
     }
 
     .product-catalog-view {
+        margin-bottom: ${theme.layout.spaceBetween90}
         .solid {
             width: 25%;
             margin: auto;
             border-top: 1px ${theme.colors.c4} solid;
             margin-bottom: ${theme.layout.spaceBetween60};
-        }
-
-        h3 {
-            text-align: center;
-            margin-bottom: -${theme.layout.spaceBetween60};
         }
     }
 `;

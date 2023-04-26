@@ -5,7 +5,7 @@ const ComponentsStyle = createGlobalStyle`
     .add-to-cart {
         font-family: ${theme.typography.primaryFontFamily};
         font-size: 1rem;
-        font-weight: 400;
+        font-weight: 300;
         color: ${theme.colors.white};
         padding: 0.625rem 1.75rem;
         background-color: ${theme.colors.button};
@@ -41,7 +41,6 @@ const ComponentsStyle = createGlobalStyle`
     .payment-button {
         font-family: ${theme.typography.primaryFontFamily};
         font-size: 1rem;
-        font-weight: 400;
         color: ${theme.colors.white};
         padding: 0.625rem 1.75rem;
         background-color: ${theme.colors.primary};
