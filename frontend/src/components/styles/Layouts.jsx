@@ -24,11 +24,6 @@ const LayoutsStyle = createGlobalStyle`
         margin: -0.5rem;
         margin-bottom: 0;
         font-size: ${theme.typography.navFontSize};
-
-        &.home {
-            background-color: ${theme.colors.backgroundColor1};
-        }
-
         .menu-md {
                 display: block;
 
@@ -49,7 +44,7 @@ const LayoutsStyle = createGlobalStyle`
 
             div {
                 height: 2px;
-                background-color: ${theme.colors.nav};
+                background-color: ${theme.colors.primary};
                 display: block;
                 margin: 4px;
                 transition: all 0.6s ease-in-out;
@@ -171,7 +166,7 @@ const LayoutsStyle = createGlobalStyle`
 
             a {
                 text-decoration: none;
-                color: ${theme.colors.nav};
+                color: ${theme.colors.primary};
                 padding: 0 0 0.25rem 0;
 
                 &:hover {
@@ -187,7 +182,7 @@ const LayoutsStyle = createGlobalStyle`
 
         .bi-cart3 {
             font-size: 1rem;
-            color: ${theme.colors.nav};
+            color: ${theme.colors.primary};
             cursor: pointer;
 
             @media (min-width: ${theme.breakpoints.up.xlarge}) {
@@ -357,7 +352,26 @@ const LayoutsStyle = createGlobalStyle`
             }
         }
     }
-
+    .header.home {
+        background-color: ${theme.colors.backgroundColor1};
+        .menu-md {
+            &__icon {
+                div {
+                    background-color: ${theme.colors.white};
+                }
+            }
+        }
+        .nav-lg {
+            ul {
+                a {
+                    color: ${theme.colors.nav};
+                }
+            }
+        }
+        .bi-cart3 {
+            color: ${theme.colors.nav};
+        }
+    }
     
     
     .footer {

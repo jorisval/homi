@@ -88,6 +88,7 @@ export const CatalogContainer = styled.div`
                 padding-bottom: 0.9375rem;
                 margin: auto;
                 margin-bottom: 2.1875rem;
+                position: relative;
                 @media (min-width: ${theme.breakpoints.up.medium}) {
                     width: 20rem;
                     font-size: 1.25rem;
@@ -96,23 +97,52 @@ export const CatalogContainer = styled.div`
                 a {
                     text-decoration: none;
                 }
-                img {
-                    width: 100%;
-                    border-radius: 0.625rem 0.625rem 0 0;
+                &__content {
+                    position: relative;
+                    z-index: 2;
                     margin-bottom: 0.9375rem;
-                    @media (min-width: ${theme.breakpoints.up.medium}) {
-                        margin-bottom: 1.875rem;
+                    img {
+                        width: 100%;
+                        border-radius: 0.625rem 0.625rem 0 0;
+                        margin-bottom: 0.9375rem;
+                        @media (min-width: ${theme.breakpoints.up.medium}) {
+                            margin-bottom: 1.875rem;
+                        }
+                    }
+                    p {
+                        color: ${theme.colors.titleH2};
+                        margin: 0 0 0.5rem;
+                        @media (min-width: ${theme.breakpoints.up.medium}) {
+                            margin-bottom: 0.5rem;
+                        }
+                    }
+                    span {
+                        color: ${theme.colors.titleH2};
                     }
                 }
-                p {
-                    color: ${theme.colors.titleH3};
-                    margin: 0 0 0.875rem;
-                    @media (min-width: ${theme.breakpoints.up.medium}) {
-                        margin-bottom: 1rem;
+                &__background {
+                    display: none;
+                    position: absolute;
+                    width: 100%;
+                    height: 70%;
+                    bottom: 0;
+                    z-index: 1;
+                    background-color: ${theme.colors.backgroundColor2};
+                    border-radius: 0.625rem;
+                    .add-product {
+                        position: absolute;
+                        bottom: -0.875rem;
+                        left: 45%;
+                        padding: 0.25rem 0.6rem;
+                        font-size: 1rem;
+                        color: ${theme.colors.white};
+                        background-color: ${theme.colors.button};
+                        border-radius: 5rem;
+                        
                     }
-                }
-                span {
-                    color: ${theme.colors.secondary};
+                    &.active {
+                        display: block;
+                    }
                 }
             }
         }

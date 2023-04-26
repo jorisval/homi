@@ -1,7 +1,8 @@
 import Cart from "./Cart";
 import MenuMd from "./Menu-md";
 import NavLg from "./Nav-lg";
-import Logo from "../../assets/images/homi_logo.png";
+import WhiteLogo from "../../assets/images/homi_logo.png";
+import ColoredLogo from "../../assets/images/colored-logo.png";
 import { HeaderContext } from "../utils/context";
 import { useContext } from "react";
 
@@ -17,7 +18,7 @@ function Header() {
     <div className={activePage === "home" ? "header home" : "header"}>
       <MenuMd />
       <div className="header__logo">
-          <img src={Logo} alt=""/>
+          <img src={activePage === "home" ? WhiteLogo : ColoredLogo} alt=""/>
       </div>
       <NavLg />
       <div className="header__cart">

@@ -6,6 +6,12 @@ import { CatalogContainer, SkeletonLoader } from "../styles/Catalog";
 
 function Catalog() {
     const { setActivePage } = useContext(HeaderContext);
+    const [activeProduct, setActiveProduct] = useState(0);
+
+    const handleMouseEnter = (index) => {
+        setActiveProduct(index);
+    };
+
     useEffect(() => {
         setActivePage("catalog");
     }, [setActivePage]);
@@ -32,7 +38,7 @@ function Catalog() {
     return(
         <CatalogContainer className="catalog">
             <div className="pages-title">
-            <h1>Catalogue<span className="bi bi-chevron-double-right"></span></h1>
+            <h1>Catalog<span className="bi bi-chevron-double-right"></span></h1>
         </div>
         <div className="services-section catalog-services">
             <div className="services">
@@ -40,20 +46,30 @@ function Catalog() {
                     ? Array.from({ length: showCount }).map((_, i) => <SkeletonLoader key={i} />)
                     : Array.isArray(data) &&
                         data.slice(0, showCount).map((product) => {
-                        return (
-                            <div className="service" key={product._id}>
-                            <Link to={`/product/${product._id}`}>
-                                <img src={product.images[0]} alt="" />
-                                <p>{product.name}</p>
-                                <span>{product.price}€</span>
-                            </Link>
-                            </div>
-                        );
-                    })
+                            return(
+                                <div className="service" 
+                                key={product._id}
+                                onMouseEnter={() => handleMouseEnter(product._id)}
+                                >
+                                    <Link to={`/product/${product._id}`}>
+                                        <div className="service__content">
+                                            <img src={product.images[0]} alt=""/>
+                                            <p>{product.name}</p>
+                                            <span>{product.price}€</span>
+                                        </div>
+                                        <div className={`service__background ${
+                                            activeProduct === product._id ? "active" : ""
+                                        }`}>
+                                            <span className="add-product">+</span>
+                                        </div>
+                                    </Link>
+                                </div>
+                            )
+                        })
                 }
             </div>
             {showCount < data?.length && (
-                <button className="cta-button" onClick={handleClick}>Voir plus</button>
+                <button className="cta-button" onClick={handleClick}>Show More</button>
             )}
         </div>
         </CatalogContainer>
