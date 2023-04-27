@@ -13,7 +13,7 @@ function Product() {
 
     const { productId } = useParams();
     const { data, dataIsLoading } = useFetch(`http://localhost:3000/api/catalog/${productId}`);
-    const { orderInfos, setOrderInfos, orderItem, setOrderItem} = useContext(CartContext);
+    const { orderInfos, setOrderInfos, setOrderItem} = useContext(CartContext);
     const [quantity, setQuantity] = useState(1);
     const [activeOption, setActiveOption] = useState(null);
     const [showOptionWarning, setShowOptionWarning] = useState(false);
@@ -21,7 +21,15 @@ function Product() {
     useEffect(() => {
         if (data) {
             const addToCartButton = document.querySelector('.add-to-cart');
-            if (addToCartButton && activeOption) {
+            if (data.options && data.options.lenght > 0) {
+                if (addToCartButton && activeOption) {
+                    addToCartButton.addEventListener('click', function (e) {
+                    document.querySelector('.cart .background').style.display = 'block';
+                    document.querySelector('.cart-content').classList.add('show');
+                    });
+                }
+            }
+            else if (addToCartButton) {
                 addToCartButton.addEventListener('click', function (e) {
                 document.querySelector('.cart .background').style.display = 'block';
                 document.querySelector('.cart-content').classList.add('show');
@@ -58,7 +66,8 @@ function Product() {
             });
         } else {
             const updatedOrderItem = {
-                ...orderItem,
+                productId: data._id,
+                price: data.price,
                 quantity: quantity,
                 option: activeOption,
             };
@@ -129,8 +138,7 @@ function Product() {
                                                     key={index} 
                                                     onClick={() => {
                                                         setActiveOption(value);
-                                                        setOrderItem({option: value, productId: data._id, price: data.price
-                                                        })
+                                                        setOrderItem({option: value, productId: data._id, price: data.price})
                                                     }}>{value}</div>
                                                 )
                                             })}

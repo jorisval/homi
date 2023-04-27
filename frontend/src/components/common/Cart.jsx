@@ -157,15 +157,18 @@ function Cart() {
     ) : (
         products.map((item, index) => {
             const itemIndex = orderInfos.orderItems.findIndex(
-                (product) => product.productId === item._id && product.option === (orderInfos.orderItems[index]?.option || '')
+                (product) => product.productId === item._id && product.option === (orderInfos.orderItems[index]?.option || null)
             );
             // Do not render the item if it doesn't exist in orderInfos.orderItems
             if (itemIndex === -1) {
+                console.log("Do not render the item if it doesn't exist in orderInfos.orderItems");
+                console.log(itemIndex);
                 return null;
             }
             // Check if the option matches
             const optionMatches = orderInfos.orderItems[itemIndex].option === orderInfos.orderItems[index].option;
             if (!optionMatches) {
+                console.log("Check if the option matches");
                 return null;
             }
             // Calculate the total price for each product in the cart
