@@ -14,7 +14,7 @@ const ComponentsStyle = createGlobalStyle`
         display: inline-block;
         cursor: pointer;
         @media (min-width: ${theme.breakpoints.up.medium}) {
-            font-size: 1.25rem;
+            font-size: 1.125rem;
             padding: 1.25rem 1.75rem;
         }
     }

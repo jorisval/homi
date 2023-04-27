@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useContext } from 'react';
 import {
   CheckoutContainer,
   FormTitle,
@@ -22,10 +22,6 @@ const Checkout = () => {
     const [paymentMethod, setPaymentMethod] = useState('card');
     const [billingAddressOption, setBillingAddressOption] = useState('same');
     const navigate = useNavigate();
-
-    useEffect(() => {
-      console.log(orderInfos);
-    }, [orderInfos]);
 
     const setCustomerInfo = (field, value) => {
         setOrderInfos({

@@ -15,6 +15,9 @@ const LayoutsStyle = createGlobalStyle`
         font-familly: ${theme.typography.primaryFontFamily};
         background-color: ${theme.colors.backgroundColor3};
     }
+    p {
+        font-size: 1rem;
+    }
     .header {
         animation: ${fadeIn} 1s ease-in;
         display: flex;
@@ -395,7 +398,6 @@ const LayoutsStyle = createGlobalStyle`
             @media (min-width: ${theme.breakpoints.up.medium}) {
                 flex-direction: row;
                 flex-wrap: wrap;
-                font-size: 1.125rem;
                 margin-bottom: ${theme.layout.spaceBetween90};
             }
 
@@ -408,10 +410,6 @@ const LayoutsStyle = createGlobalStyle`
                 color: ${theme.colors.titleH3};
                 font-weight: 500;
                 margin-bottom: 0.625rem;
-
-            @media (min-width: ${theme.breakpoints.up.medium}) {
-                font-size: 1.25rem;
-            }
             }
 
             ul {
@@ -469,10 +467,6 @@ const LayoutsStyle = createGlobalStyle`
 
         &__part-2 {
             font-size: 1rem;
-
-            @media (min-width: ${theme.breakpoints.up.medium}) {
-                font-size: 1.125rem;
-            }
 
             p {
                 margin: 0;

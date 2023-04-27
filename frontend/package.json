@@ -2,7 +2,7 @@
   "name": "homi",
   "version": "1.0.0",
   "description": "modern website for homi shop",
-  "main": "index.js",
+  "main": "index.jsx",
   "scripts": {
     "sass": "sass --watch ./src/sass/main.scss:./public/css/style.css",
     "start": "react-scripts start",

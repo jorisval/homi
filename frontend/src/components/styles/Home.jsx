@@ -134,9 +134,6 @@ animation: ${fadeIn} 1s ease-in;
             font-size: 1rem;
             line-height: 1.625rem;
             margin-bottom: ${theme.layout.spaceBetween20};
-            @media (min-width: ${theme.breakpoints.up.medium}) {
-                font-size: 1.125rem;
-            }
         }
         .four-benefits {
             display: flex;
@@ -194,9 +191,6 @@ animation: ${fadeIn} 1s ease-in;
             font-size: 1rem;
             line-height: 1.625rem;
             margin-bottom: ${theme.layout.spaceBetween20};
-            @media (min-width: ${theme.breakpoints.up.medium}) {
-                font-size: 1.125rem;
-            }
         }
         .four-benefits {
             display: flex;
@@ -247,20 +241,14 @@ animation: ${fadeIn} 1s ease-in;
         }
         p {
             color: ${theme.colors.paragraph};
-            font-size: 0.875rem;
-            line-height: 1.25rem;
+            font-size: 1rem;
+            line-height: 1.5rem;
             margin: 0.5rem 0;
-            @media (min-width: ${theme.breakpoints.up.medium}) {
-                font-size: 0.9375rem;
-            }
         }
         a {
             color: ${theme.colors.paragraph};
-            font-size: 0.875rem;
+            font-size: 1rem;
             text-decoration: none;
-            @media (min-width: ${theme.breakpoints.up.medium}) {
-                font-size: 0.9375rem;
-            }
             :hover {
                 color: ${theme.colors.secondary};
             }

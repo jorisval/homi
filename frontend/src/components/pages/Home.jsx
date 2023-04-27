@@ -7,7 +7,6 @@ import BeneSecond from "../../assets/images/benefits2-large.png";
 import PostImage1 from "../../assets/images/nordic.png";
 import PostImage2 from "../../assets/images/kruzo.png";
 import PostImage3 from "../../assets/images/ergonomic.png";
-import { useFetch } from "../utils/hooks";
 import { Link } from "react-router-dom";
 import { HomeContainer } from "../styles/Home";
 
@@ -17,8 +16,6 @@ function Home() {
     useEffect(() => {
         setActivePage('home');
     }, [setActivePage]);
-    const { data } = useFetch('http://localhost:3000/api/client-result');
-    console.log(data);
     return(
         <HomeContainer className="home">
             <div className="hero">
@@ -34,7 +31,7 @@ function Home() {
                     <img src={Hero} alt=""/>
                 </div>
             </div>
-            <CatalogView />
+            <CatalogView id="catalogView"/>
             <div className="benefits-one">
                 <div className="benefits-one__image">
                     <img src={BeneFirst} alt=""/>

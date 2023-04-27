@@ -83,10 +83,6 @@ export const ProductContainer = styled.div`
                 span {
                     color: ${theme.colors.primary};
                     font-size: 1.25rem;
-
-                    @media (min-width: ${theme.breakpoints.up.medium}) {
-                        font-size: 1.5rem;
-                    }
                 }
             }
 
@@ -127,6 +123,7 @@ export const ProductContainer = styled.div`
 
                 label {
                     display: block;
+                    font-size: 1.125rem;
                     margin-bottom: 0.5rem;
                     margin-right: 0.625rem;
                 }
@@ -177,12 +174,10 @@ export const ProductContainer = styled.div`
         padding: ${theme.layout.spaceBetween30} ${theme.layout.marginLeftRight};
         color: ${theme.colors.paragraph};
         font-size: 1rem;
-        line-height: 1.375rem;
+        line-height: 1.8rem;
 
         @media (min-width: ${theme.breakpoints.up.medium}) {
             padding: ${theme.layout.spaceBetween60} ${theme.layout.marginLeftRight};
-            font-size: 1.125rem;
-            line-height: 1.875rem;
             width: 70%;
             margin: auto;
         }
