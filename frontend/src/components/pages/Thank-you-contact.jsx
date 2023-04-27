@@ -44,8 +44,8 @@ const ThankYouPopup = ({ onClose }) => {
         <PopupOverlay onClick={onClose}>
           <PopupContent onClick={(e) => e.stopPropagation()}>
               <CloseButton onClick={onClose}>&times;</CloseButton>
-              <ThankYouTitle>Merci de nous avoir contacté !</ThankYouTitle>
-              <p>Nous allons vous répondre dans les plus brefs délais !</p>
+              <ThankYouTitle>Thank you for contacting us!</ThankYouTitle>
+              <p>We will answer you as soon as possible!</p>
           </PopupContent>
         </PopupOverlay>
     );

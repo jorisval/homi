@@ -153,15 +153,15 @@ const Checkout = () => {
         <CardDetails>
         <FormRow>
             <FormGroup>
-                <StyledLabel htmlFor="cardNumber">Numero de carte</StyledLabel>
+                <StyledLabel htmlFor="cardNumber">Card number</StyledLabel>
                 <StyledInput type="text" id="cardNumber" />
             </FormGroup>
             <FormGroup>
-                <StyledLabel htmlFor="expirationDate">Date d'expiration</StyledLabel>
+                <StyledLabel htmlFor="expirationDate">Expiration date</StyledLabel>
                 <StyledInput type="text" id="expirationDate" />
             </FormGroup>
             <FormGroup>
-                <StyledLabel htmlFor="securityCode">Code de sécurité</StyledLabel>
+                <StyledLabel htmlFor="securityCode">Secure code</StyledLabel>
                 <StyledInput type="text" id="securityCode" />
             </FormGroup>
         </FormRow>
@@ -172,10 +172,10 @@ const Checkout = () => {
         <CheckoutContainer>
             <form onSubmit={handleSubmit}>
                 <FormSection>
-                <FormTitle>Information de contact</FormTitle>
+                <FormTitle>Contact information</FormTitle>
                 <FormRow>
                     <FormGroup>
-                    <StyledLabel htmlFor="name">Nom</StyledLabel>
+                    <StyledLabel htmlFor="name">Name</StyledLabel>
                     <StyledInput
                         type="text"
                         id="name"
@@ -195,11 +195,11 @@ const Checkout = () => {
                 </FormRow>
                 </FormSection>
                 <FormSection>
-                <FormTitle>Adresse de livraison</FormTitle>
+                <FormTitle>Shipping adresse</FormTitle>
                 {addressFields('shippingAddress')}
                 </FormSection>
                 <FormSection>
-                <FormTitle>Adresse de Facturation</FormTitle>
+                <FormTitle>Billing address</FormTitle>
                 <StyledRadioWrapper>
                   <StyledRadioLabel>
                     <StyledRadioInput
@@ -209,7 +209,7 @@ const Checkout = () => {
                       checked={billingAddressOption === 'same'}
                       onChange={(e) => setBillingAddressOption(e.target.value)}
                     />
-                    Même que l'adresse de livraison
+                    Same as shipping address
                   </StyledRadioLabel>
                   <StyledRadioLabel>
                     <StyledRadioInput
@@ -219,14 +219,14 @@ const Checkout = () => {
                       checked={billingAddressOption === 'different'}
                       onChange={(e) => setBillingAddressOption(e.target.value)}
                     />
-                    Utiliser une adresse différente
+                    Use a different address
                   </StyledRadioLabel>
                 </StyledRadioWrapper>
                 {billingAddressOption === 'different' && addressFields('billingAddress')}
                 <FormSeparator />
               </FormSection>
               <FormSection>
-                <FormTitle>Methode de paiement </FormTitle>
+                <FormTitle>Payment method</FormTitle>
                 <StyledRadioWrapper>
                   <StyledRadioLabel>
                     <StyledRadioInput
@@ -236,7 +236,7 @@ const Checkout = () => {
                       checked={paymentMethod === 'card'}
                       onChange={(e) => setPaymentMethod(e.target.value)}
                     />
-                    Carte de crédit
+                    Credit card
                   </StyledRadioLabel>
                   <StyledRadioLabel>
                     <StyledRadioInput
@@ -253,7 +253,7 @@ const Checkout = () => {
                 <FormSeparator />
               </FormSection>
               <FormSection style={{border: 'unset'}}>
-                <StyledButton type="submit">Finaliser la commande</StyledButton>
+                <StyledButton type="submit">Finalize order</StyledButton>
               </FormSection>
             </form>
             </CheckoutContainer>

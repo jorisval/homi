@@ -114,19 +114,19 @@ const ThankYou = () => {
 
   return (
     <ThankYouContainer>
-      <ThankYouTitle>Merci pour votre commande!</ThankYouTitle>
-      <ThankYouSubtitle>Récapitulatif de la commande</ThankYouSubtitle>
+      <ThankYouTitle>Thank you for your order!</ThankYouTitle>
+      <ThankYouSubtitle>Order summary</ThankYouSubtitle>
       <OrderSummary>
         <OrderDetails>
-          <OrderDetail>Commande ID: {orderPlaced._id}</OrderDetail>
+          <OrderDetail>Order ID: {orderPlaced._id}</OrderDetail>
           <OrderDetail>Date: {new Date(orderPlaced.createdAt).toLocaleDateString()}</OrderDetail>
         </OrderDetails>
         <OrderDetails>
-          <OrderDetail>Produit total: {orderPlaced.orderItems.length}</OrderDetail>
-          <OrderDetail>Montant total: ${orderPlaced.totalAmount}</OrderDetail>
+          <OrderDetail>Total product: {orderPlaced.orderItems.length}</OrderDetail>
+          <OrderDetail>Total amount: ${orderPlaced.totalAmount}</OrderDetail>
         </OrderDetails>
       </OrderSummary>
-      <p>Votre commande a été enregistrée avec succès et sera expédiée bientôt!</p>
+      <p>Your order has been successfully registered and will be shipped soon!</p>
     </ThankYouContainer>
   );
 };
