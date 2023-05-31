@@ -23,16 +23,13 @@ function Contact() {
         }
       
         try {
-            const response = await fetch("http://localhost:3000/api/contact/comment/", {
+            await fetch("http://localhost:3000/api/contact/comment/", {
                 method: "POST",
                 body: searchParams,
                 headers: {
                 "Content-Type": "application/x-www-form-urlencoded",
                 },
             });
-      
-            const data = await response.json();
-            console.log(data);
 
             // Reset the form
             event.target.reset();
