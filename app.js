@@ -16,7 +16,10 @@ const allowedDomains = [
     'http://localhost:3001',
     'http://localhost:3001/',
     'https://homi.vercel.app/',
-    'https://homi.vercel.app'
+    'https://homi.vercel.app',
+    'https://homi-shop.vercel.app',
+    'https://homi-shop.vercel.app'
+
 ];
   
 
