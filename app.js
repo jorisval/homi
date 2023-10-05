@@ -18,7 +18,11 @@ const allowedDomains = [
     'https://homi.vercel.app/',
     'https://homi.vercel.app',
     'https://homi-shop.vercel.app',
-    'https://homi-shop.vercel.app'
+    'https://homi-shop.vercel.app',
+    'https://homi-shop-fc421ffc3fc1.herokuapp.com/',
+    'https://homi-shop-fc421ffc3fc1.herokuapp.com',
+    'http://homi-shop-fc421ffc3fc1.herokuapp.com/',
+    'http://homi-shop-fc421ffc3fc1.herokuapp.com'
 
 ];
   

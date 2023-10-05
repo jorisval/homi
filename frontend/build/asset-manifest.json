@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/static/js/main.14967999.js",
+    "main.js": "/static/js/main.ebb90a1a.js",
     "static/media/benefits1-large.png": "/static/media/benefits1-large.9b82289a4c95c66dbca4.png",
     "static/media/benefits2-large.png": "/static/media/benefits2-large.9205a5298c37cf8be05b.png",
     "static/media/hero_image.png": "/static/media/hero_image.6063312fbceb7d0a9028.png",
@@ -9,9 +9,9 @@
     "static/media/nordic.png": "/static/media/nordic.b72d9a9d360bcefcb6b6.png",
     "static/media/ergonomic.png": "/static/media/ergonomic.2700e6e460cff6358944.png",
     "index.html": "/index.html",
-    "main.14967999.js.map": "/static/js/main.14967999.js.map"
+    "main.ebb90a1a.js.map": "/static/js/main.ebb90a1a.js.map"
   },
   "entrypoints": [
-    "static/js/main.14967999.js"
+    "static/js/main.ebb90a1a.js"
   ]
 }
